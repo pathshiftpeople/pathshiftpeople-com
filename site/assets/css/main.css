@@ -8,14 +8,19 @@ html, body {
     padding: 0;
 }
 
-body {
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  /* at least 100% of the viewport height */
+
     background-image: url('/assets/img/background-image_9efc0ca6-aac2-44e6-a829-90fe965fb540.jpg');
-    background-size: cover;  /* to cover the full viewport */
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center; /* to position it in the center */
-    font-family: Arial, sans-serif; /* optional: for better typography */
-    margin: 2em 5em 5em 2em;
+    background-position: center center;
+
+    padding: 2em 5em 5em 2em;
 }
+
 
 /* Responsive styling for smaller screens */
 @media (max-width: 768px) {
