@@ -1,7 +1,33 @@
 {% include '_header.html' %}
   <!-- this file is {{ output_filename }} -->
   <script src="https://store.pathshiftpeople.com/js/gumroad.js"></script>
+  <style>
+  .content {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+  </style>
 
+  <script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight){
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+  }
+  </script>
+  
   <h1>Path Shift People</h1>
 
   <nav>
@@ -33,7 +59,7 @@
 
 
   <h2 id="products">Find your Path</h2>
-<img src="https://www.workflowmax.com/hubfs/what%20is%20personal%20productivity.png" alt="">
+<img width="90" height="90" src="https://www.workflowmax.com/hubfs/what%20is%20personal%20productivity.png" alt="">
   <button type="button" class="collapsible">Personal productivity</button>
   <div class="content">
     <p>Whatever your productivity system, these short courses will help you improve it, helping you design a personal productivity system that meets your unique needs, rather than training you to adopt someone else's, and ensuring that the resulting system saves you more time than you actually spend developing and refining it... <a href="/products/personal-productivity.html">read more</a> or check out:</p>
@@ -45,7 +71,7 @@
       </ul>
   </div>
 
-  <img src="https://ec-pr.com/wp-content/uploads/2020/05/Communication-strategy-QA.png" alt="">
+  <img width="90" height="90" src="https://ec-pr.com/wp-content/uploads/2020/05/Communication-strategy-QA.png" alt="">
     <button type="button" class="collapsible">Communications</button>
     <div class="content">
       <p><b>The Communication strategy framework demystifies communication strategy.</b> Depending on the course you select, you will create either an "executive summary" of your organisation's external communications strategy, or a much more detailed full strategy, along with useful internal communications tools to magnify buy-in ... <a href="/products/personal-productivity.html">read more</a> or <a href="https://pathshiftpeople.gumroad.com/l/comms_strategy_framework">buy</a>
