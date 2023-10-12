@@ -2,6 +2,7 @@
   <!-- this file is {{ output_filename }} -->
   <script src="https://store.pathshiftpeople.com/js/gumroad.js"></script>
 
+  <style>
   /* Style the button that is used to open and close the collapsible content */
   .collapsible {
     background-color: #eee;
@@ -27,21 +28,26 @@
     overflow: hidden;
     background-color: #f1f1f1;
   }
-  
-  var coll = document.getElementsByClassName("collapsible");
-  var i;
+  </style>
 
-  for (i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      var content = this.nextElementSibling;
-      if (content.style.display === "block") {
-        content.style.display = "none";
-      } else {
-        content.style.display = "block";
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var content = this.nextElementSibling;
+              if (content.style.display === "block") {
+                  content.style.display = "none";
+              } else {
+                  content.style.display = "block";
+              }
+          });
       }
-    });
-  }
+  });
+  </script>
 
   <h1>Path Shift People</h1>
 
